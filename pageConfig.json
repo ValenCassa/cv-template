@@ -1,0 +1,27 @@
+{
+  "articlePaths": ["posts", "projects"],
+  "profile": {
+    "name": "John Doe",
+    "description": "Lorem ipsum dolor sit amet consectetur. Ultricies viverra quisque magnis volutpat urna. Pellentesque enim nunc nec purus. Cursus ornare massa ullamcorper in tristique faucibus. Sit sem mattis bibendum felis massa aenean quam at."
+  },
+  "skills": {
+    "Front-end": ["HTML", "CSS", "JavaScript"],
+    "Back-end": ["Node.js", "Express.js", "MongoDB"],
+    "Other": ["Git", "GitHub", "Markdown"]
+  },
+  "contact": [
+    {
+      "name": "Twitter",
+      "href": "https://twitter.com/username"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/jhon-doe"
+    },
+    {
+      "name": "Email",
+      "href": "mailto:your_email@gmail.com"
+    }
+  ],
+  "hostName": "https://example.com"
+}

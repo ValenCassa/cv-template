@@ -1,9 +1,40 @@
+@font-face {
+  font-family: "Pencerio";
+  src: url("/fonts/Pencerio-Hairline.woff2") format("woff2"),
+    url("/fonts/Pencerio-Hairline.woff") format("woff"),
+    url("/fonts/Pencerio-Hairline.ttf") format("truetype");
+  font-weight: 50;
+  font-display: swap;
+  font-style: normal;
+}
+
+@tailwind base;
+
+@layer base {
+  html {
+    @apply text-neutral-900;
+    @apply bg-neutral-50;
+  }
+
+  [data-theme="dark"] {
+    @apply text-neutral-100;
+    @apply bg-neutral-900;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  transition-property: background-color, border;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
 a {
@@ -13,14 +44,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
