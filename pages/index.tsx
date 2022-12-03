@@ -42,7 +42,7 @@ export default function Home({
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   try {
     const projects = await getProjects();
     const posts = await getPosts();
