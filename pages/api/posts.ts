@@ -2,20 +2,21 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import * as fs from "fs";
 import matter from "gray-matter";
+import path from "path";
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
   if (req.method === "GET") {
-    const files = fs.readdirSync(`${process.cwd()}/pages/posts`, {
+    const files = fs.readdirSync(path.join(process.cwd(), "pages", "posts"), {
       withFileTypes: true,
     });
     const posts = files.map((file) => {
       if (!file.name.endsWith(".mdx")) return;
 
       const fileContent = fs.readFileSync(
-        `${process.cwd()}/pages/posts/${file.name}`,
+        path.join(process.cwd(), "pages", "posts", file.name),
         "utf-8"
       );
 

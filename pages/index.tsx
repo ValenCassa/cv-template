@@ -9,8 +9,8 @@ import {
   SkillsSection,
 } from "components/sections";
 
-import { GetStaticProps } from "next";
-import { getPosts, getProjects } from "services";
+import { GetServerSideProps, GetStaticProps } from "next";
+import { BASE_URL, getPosts, getProjects } from "services";
 import { Data } from "types";
 import pageConfig from "pageConfig.json";
 const { profile } = pageConfig;
@@ -22,15 +22,12 @@ export default function Home({
   projects: Data[];
   posts: Data[];
 }) {
-  console.log(`https://${process.env.VERCEL_URL}`);
   return (
     <>
       <Meta
         title={`${profile.name} - Homepage`}
         description={profile.description}
-        image={`${
-          process.env.VERCEL_URL ? "https://" + process.env.VERCEL_URL : ""
-        }/api/og-image`}
+        image={`${BASE_URL}/api/og-image`}
       />
       <RouteAnimate>
         <div className={clsx("grid", "gap-7")}>
@@ -45,7 +42,7 @@ export default function Home({
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const projects = await getProjects();
     const posts = await getPosts();
