@@ -4,6 +4,20 @@
     "name": "John Doe",
     "description": "As a front end developer, I have experience working with a variety of technologies and am skilled in creating responsive, dynamic interfaces that are easy to navigate on different devices. I am passionate about creating user-centered experiences and strive to stay up-to-date with the latest developments in front end technologies."
   },
+  "experience": [
+    {
+      "title": "Front End Developer",
+      "company": "Company Name",
+      "dateFrom": "2018-01-01",
+      "dateTo": "2019-01-01",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia tincidunt, nunc orci aliquam nisl, vitae ultricies nisl nunc eget lorem. Sed euismod, nisl nec lacinia tincidunt, nunc orci aliquam nisl, vitae ultricies nisl nunc eget lorem."
+    },
+    {
+      "title": "Front End Developer",
+      "company": "Company Name 2",
+      "dateFrom": "2019-01-01"
+    }
+  ],
   "skills": {
     "Front-end": ["HTML", "CSS", "JavaScript"],
     "Back-end": ["Node.js", "Express.js", "MongoDB"],

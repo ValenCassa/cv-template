@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { Data } from "types";
+import { formatDate } from "utils/formatDate";
 
 const SectionTable = ({
   data,
@@ -25,13 +26,7 @@ const SectionTable = ({
               "mb-3 sm:mb-0"
             )}
           >
-            <p>
-              {new Date(item.data.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
+            <p>{formatDate(item.data.date)}</p>
           </div>
           <Link href={`/${type}s/${item.slug}`}>
             <div

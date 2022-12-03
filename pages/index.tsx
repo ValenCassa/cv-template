@@ -3,6 +3,7 @@ import RouteAnimate from "components/AnimateLayout";
 import Meta from "components/Meta";
 import {
   ContactSection,
+  ExperienceSection,
   PostsSection,
   ProfileSection,
   ProjectsSection,
@@ -32,6 +33,7 @@ export default function Home({
       <RouteAnimate>
         <div className={clsx("grid", "gap-7")}>
           <ProfileSection />
+          <ExperienceSection />
           <SkillsSection />
           <ProjectsSection projects={projects} />
           <PostsSection posts={posts} />
