@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## CV Template
 
-## Getting Started
+Hi there! :wave: This is a CV Template made with Next.js, Tailwind and MDX!
 
-First, run the development server:
+If you wanna make it your own, just go and edit the pageConfig.json file, which includes your personal info, skills, experience and your contact links. By default, it looks like this:
+```json
+{
+  "articlePaths": ["posts", "projects"],
+  "profile": {
+    "name": "John Doe",
+    "description": "As a front end developer, I have experience working with a variety of technologies and am skilled in creating responsive, dynamic interfaces that are easy to navigate on different devices. I am passionate about creating user-centered experiences and strive to stay up-to-date with the latest developments in front end technologies."
+  },
+  "experience": [
+    {
+      "title": "Front End Developer",
+      "company": "Company Name",
+      "dateFrom": "2018-01-01",
+      "dateTo": "2019-01-01",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia tincidunt, nunc orci aliquam nisl, vitae ultricies nisl nunc eget lorem. Sed euismod, nisl nec lacinia tincidunt, nunc orci aliquam nisl, vitae ultricies nisl nunc eget lorem."
+    },
+    {
+      "title": "Front End Developer",
+      "company": "Company Name 2",
+      "dateFrom": "2019-01-01"
+    }
+  ],
+  "skills": {
+    "Front-end": ["HTML", "CSS", "JavaScript"],
+    "Back-end": ["Node.js", "Express.js", "MongoDB"],
+    "Other": ["Git", "GitHub", "Markdown"]
+  },
+  "contact": [
+    {
+      "name": "Twitter",
+      "href": "https://twitter.com/username"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/jhon-doe"
+    },
+    {
+      "name": "Email",
+      "href": "mailto:your_email@gmail.com"
+    }
+  ]
+}
 
-```bash
-npm run dev
-# or
-yarn dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The skills keys are being mapped, which means you can add more of them, like a _Test_ key.
