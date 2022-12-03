@@ -9,9 +9,12 @@ export default function handler(
   res: NextApiResponse<any>
 ) {
   if (req.method === "GET") {
-    const files = fs.readdirSync(path.resolve("./pages", "projects"), {
-      withFileTypes: true,
-    });
+    const files = fs.readdirSync(
+      path.join(process.cwd(), "pages", "projects"),
+      {
+        withFileTypes: true,
+      }
+    );
     const projects = files.map((file) => {
       if (!file.name.endsWith(".mdx")) return;
 

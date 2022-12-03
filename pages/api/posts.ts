@@ -9,7 +9,7 @@ export default function handler(
   res: NextApiResponse<any>
 ) {
   if (req.method === "GET") {
-    const files = fs.readdirSync(path.resolve("./pages", "posts"), {
+    const files = fs.readdirSync(path.join(process.cwd(), "pages", "posts"), {
       withFileTypes: true,
     });
     const posts = files.map((file) => {
