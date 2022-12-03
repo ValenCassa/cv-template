@@ -57,7 +57,10 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   } catch (error) {
     return {
-      notFound: true,
+      props: {
+        projects: [],
+        posts: [],
+      },
     };
   }
 };
