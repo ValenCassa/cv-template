@@ -22,6 +22,7 @@ export default function Home({
   projects: Data[];
   posts: Data[];
 }) {
+  console.log(`https://${process.env.VERCEL_URL}`);
   return (
     <>
       <Meta
