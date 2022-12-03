@@ -22,7 +22,7 @@ const SectionTable = ({
               "text-sm",
               "text-neutral-400",
               "dark:text-neutral-500",
-              "mb-1 sm:mb-0"
+              "mb-3 sm:mb-0"
             )}
           >
             <p>

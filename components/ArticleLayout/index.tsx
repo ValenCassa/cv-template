@@ -23,7 +23,7 @@ const ArticleLayout = ({ children }: { children: React.ReactNode }) => {
           ← Back
         </p>
       </Link>
-      <article className="prose dark:prose-invert prose-sm !max-w-full">
+      <article className="prose dark:prose-invert prose-sm !max-w-full pb-7">
         {children}
       </article>
     </RouteAnimate>
