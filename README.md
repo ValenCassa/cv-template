@@ -55,7 +55,7 @@ Also, if you want to change the number of projects/posts displayed on the index 
 1. Clone the repo
 2. Config the pageConfig file as you wish!
 3. Deploy to Vercel
-4. Set up an environment variable named NEXT_PUBLIC_VERCEL_URL and set its value to your website's domain!
+4. Set up an environment variable named `NEXT_PUBLIC_VERCEL_URL` and set its value to your website's domain!
 5. That's it, that's everything you need to do :)
 
 Feel free to change the template as you wish! :)
