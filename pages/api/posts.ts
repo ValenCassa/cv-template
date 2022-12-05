@@ -12,7 +12,9 @@ export default function handler(
     const files = fs.readdirSync(path.join(process.cwd(), "pages", "posts"), {
       withFileTypes: true,
     });
-    const posts = files.map((file) => {
+
+    const filteredFiles = files.filter((file) => !file.name.includes("index"));
+    const posts = filteredFiles.map((file) => {
       if (!file.name.endsWith(".mdx")) return;
 
       const fileContent = fs.readFileSync(
@@ -30,6 +32,18 @@ export default function handler(
         content,
       };
     });
-    res.status(200).json(posts);
+
+    const orderedPosts = posts.sort((a, b) => {
+      return (
+        new Date(b?.data.date).getTime() - new Date(a?.data.date).getTime()
+      );
+    });
+
+    if (req.query.limit) {
+      const limitedPosts = orderedPosts.slice(0, Number(req.query.limit));
+      return res.status(200).json(limitedPosts);
+    }
+
+    res.status(200).json(orderedPosts);
   }
 }

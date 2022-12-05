@@ -15,7 +15,8 @@ export default function handler(
         withFileTypes: true,
       }
     );
-    const projects = files.map((file) => {
+    const filteredFiles = files.filter((file) => !file.name.includes("index"));
+    const projects = filteredFiles.map((file) => {
       if (!file.name.endsWith(".mdx")) return;
 
       const fileContent = fs.readFileSync(
@@ -33,6 +34,18 @@ export default function handler(
         content,
       };
     });
-    res.status(200).json(projects);
+
+    const orderedProjects = projects.sort((a, b) => {
+      return (
+        new Date(b?.data.date).getTime() - new Date(a?.data.date).getTime()
+      );
+    });
+
+    if (Number(req.query.limit)) {
+      const limitedProjects = orderedProjects.slice(0, Number(req.query.limit));
+      return res.status(200).json(limitedProjects);
+    }
+
+    res.status(200).json(orderedProjects);
   }
 }

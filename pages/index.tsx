@@ -10,7 +10,7 @@ import {
   SkillsSection,
 } from "components/sections";
 
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import { BASE_URL, getPosts, getProjects } from "services";
 import { Data } from "types";
 import pageConfig from "pageConfig.json";
@@ -46,8 +46,8 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const projects = await getProjects();
-    const posts = await getPosts();
+    const projects = await getProjects({ limit: true });
+    const posts = await getPosts({ limit: true });
 
     return {
       props: {

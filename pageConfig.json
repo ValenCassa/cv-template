@@ -1,5 +1,5 @@
 {
-  "articlePaths": ["posts", "projects"],
+  "articlePaths": ["/posts/", "/projects/"],
   "profile": {
     "name": "John Doe",
     "description": "As a front end developer, I have experience working with a variety of technologies and am skilled in creating responsive, dynamic interfaces that are easy to navigate on different devices. I am passionate about creating user-centered experiences and strive to stay up-to-date with the latest developments in front end technologies."
@@ -36,5 +36,7 @@
       "name": "Email",
       "href": "mailto:your_email@gmail.com"
     }
-  ]
+  ],
+  "postsLimit": 3,
+  "projectsLimit": 3
 }

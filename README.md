@@ -3,9 +3,10 @@
 Hi there! :wave: This is a CV Template made with Next.js, Tailwind and MDX!
 
 If you wanna make it your own, just go and edit the pageConfig.json file, which includes your personal info, skills, experience and your contact links. By default, it looks like this:
+
 ```json
 {
-  "articlePaths": ["posts", "projects"],
+  "articlePaths": ["/posts/", "/projects/"],
   "profile": {
     "name": "John Doe",
     "description": "As a front end developer, I have experience working with a variety of technologies and am skilled in creating responsive, dynamic interfaces that are easy to navigate on different devices. I am passionate about creating user-centered experiences and strive to stay up-to-date with the latest developments in front end technologies."
@@ -44,6 +45,9 @@ If you wanna make it your own, just go and edit the pageConfig.json file, which 
     }
   ]
 }
-
 ```
-The skills keys are being mapped, which means you can add more of them, like a _Test_ key.
+
+The skills keys are being mapped, which means you can add more of them, like a _Test_ key.  
+Also, if you want to change the number of projects/posts displayed on the index page, change the _postsLimit_ and/or the _projectsLimit_. If you set them to 0 it will be limitless.
+
+Feel free to change the template as you wish! :)

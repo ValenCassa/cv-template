@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import RouteAnimate from "components/AnimateLayout";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const ArticleLayout = ({ children }: { children: React.ReactNode }) => {
+  const { back } = useRouter();
   return (
     <RouteAnimate>
-      <Link href={"/"}>
+      <div role={"link"} onClick={back}>
         <p
           className={clsx(
             "text-md",
@@ -22,7 +23,7 @@ const ArticleLayout = ({ children }: { children: React.ReactNode }) => {
         >
           ← Back
         </p>
-      </Link>
+      </div>
       <article className="prose dark:prose-invert prose-sm !max-w-full pb-7">
         {children}
       </article>
