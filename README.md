@@ -50,4 +50,12 @@ If you wanna make it your own, just go and edit the pageConfig.json file, which 
 The skills keys are being mapped, which means you can add more of them, like a _Test_ key.  
 Also, if you want to change the number of projects/posts displayed on the index page, change the _postsLimit_ and/or the _projectsLimit_. If you set them to 0 it will be limitless.
 
+### Deploy
+
+1. Clone the repo
+2. Config the pageConfig file as you wish!
+3. Deploy to Vercel
+4. Set up an environment variable named NEXT_PUBLIC_VERCEL_URL and set its value to your website's domain!
+5. That's it, that's everything you need to do :)
+
 Feel free to change the template as you wish! :)
